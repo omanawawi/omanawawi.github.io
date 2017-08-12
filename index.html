@@ -1,0 +1,52 @@
+# omanawawi.github.io
+<html>
+  <head>
+    <link rel="stylesheet" href="index.css" />
+    <script src="jquery-3.2.1.js"></script>
+    <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Portfolio">
+    <meta property="og:description" content="Built with Next Academy">
+    <meta property="og:site_name" content="My Portfolio">
+    <meta property="og:image" content="https://www.nextacademy.com/img/share/nextacademy-generic.jpg">
+  </head>
+  <body>
+      <div id="navbar">
+          <a href="#about" class="nav-links">Click Here Not Scam </a>
+          <a href="#show" class="nav-links">My Past Experience</a>
+    </div>
+    <div class="container">
+        <a href="http://s443.photobucket.com/user/andreaswwewgw/media/IMG_0357.jpg.html" target="_blank"><img src="http://i443.photobucket.com/albums/qq155/andreaswwewgw/IMG_0357.jpg" border="0" alt="cat photo IMG_0357.jpg"></a>      </div>
+      <div class="small-container" id="about">
+        <h1>Hello, I'm Omar Nawawi.</h1>
+        <p>Content Creator|Lover|Cat.</p>
+        <p>I'm from Terengganu and I love music.</p>
+      </div>
+
+      <div class="small-container" id="show">
+        <h1>What I've done in the past</h1>
+        <ol>
+          <li>Learn to code</li>
+          <li>Some digital marketing</li>
+          <li>Travel</li>
+        </ol>
+
+    </div>
+
+    <div class="small-container">
+      <button id="surprise-button">I won a game~</button>
+      <div id="#haha"></div>
+    </div>
+  </body>
+  <script>
+  $(document).ready(function() {
+    $("#surprise-button").click(function(e) {
+      $.get("http://api.giphy.com/v1/gifs/random?tag=cat&api_key=dc6zaTOxFJmzC", function(res) {
+        $('#haha').html('<img src="' + res.data.image_url + '">' )
+      })
+    })
+  })
+</script>
+</html>
